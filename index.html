@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <title>ViewPage</title>
+    </head>  
+    <body>
+        <header class="header bg-light">
+            <div class="header__image-container"><img src="assets/camera.png" alt=""></div>
+            <form action="" class="header__search">
+                <div class="search__input input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">Model Name</span>
+                    </div>
+                    <input type="text" class="form-control" id="search_input" aria-describedby="basic-addon3" placeholder="Type something for search">
+                </div>
+                <button class="header__button" type="submit" id="search_button">Search</button>
+                <button class="header__button outlined" id="cancel_search_button">Clear</button>
+            </form>
+        </header>
+        <section class="hero">
+            <aside class="hero__manager">
+                <h1 class="h1">Manage cameras</h1>
+                <div class="manager__sort">
+                    <h3 class="h3">Sort by the longest battery life</h3>
+                    <button id="sort_button" class="btn btn-primary">Sort</button>
+                </div>
+                <div class="line"></div>
+                <div class="manager__count">
+                    <h3 class="h3">Count total weight:</h3>
+                    <button id="count_button" class="btn btn-primary">Count</button>
+                    <h3 class="h3">Total weight:</h3>
+                </div>
+            </aside>
+            <main class="cameras__container" id="cameras_container">
+            </main>
+            <aside class="hero__create">
+                <h1 id="form_header" class="mb-3 h1">Create camera</h1>
+                <form action="" class="create__form">
+                    <div class="field-container form-group">
+                        <label for="production_year">Production year</label>
+                        <br>
+                        <input type="number" name="production_year" id="production_year_input" class="form-control">
+                    </div>
+                    <div class="field-container form-group">
+                        <label for="country">Country manufacturer</label>
+                        <br>
+                        <input type="text" name="country" id="country_input" class="form-control">
+                    </div>
+                    <div class="field-container form-group">
+                        <label for="model_name">Model name</label>
+                        <br>
+                        <input type="text" name="model_name" id="model_name_input" class="form-control">
+                    </div>
+                    <div class="field-container form-group">
+                        <label for="battery_life">Battery life (In Hours)</label>
+                        <br>
+                        <input type="number" name="battery_life" id="battery_life_input" class="form-control">
+                    </div>
+                    <div class="field-container form-group">
+                        <label for="weight">Weight (In Grams)</label>
+                        <br>
+                        <input type="number" name="weight" id="weight_input" class="form-control">
+                    </div>
+                    <button id="create_button" class="btn btn-primary btn-lg btn-block">Create</button>
+                </form>
+            </aside>
+        </section>
+        <script type="module "src="js/index.js"></script>
+    </body>
+</html>
